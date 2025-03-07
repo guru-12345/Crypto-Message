@@ -16,4 +16,4 @@ root.resizable(False, False)  # This stops people from resizing the window (it s
 root.title("Message Encoder")  # This gives the window a title, which shows at the top of the window
 
 # This keeps the window open and ready to use
-root.mainloop()  # This line runs the program and keeps the window open until you close it# Write your code here :-)
+root.mainloop()  # This line runs the program and keeps the window open until you close it
