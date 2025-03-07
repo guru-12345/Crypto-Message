@@ -1,5 +1,5 @@
 #Run the code and observe the x and y coordinates.
-#Task: Create and Place a label at coordinates (430, 430) in the bottom-right corner.
+#Task: Create and place new label at coordinates (430, 430) in the bottom-right corner.
 
 import customtkinter as ctk
 
