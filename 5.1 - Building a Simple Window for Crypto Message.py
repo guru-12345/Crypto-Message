@@ -12,7 +12,7 @@ root = ctk.CTk()  # This makes the main window where everything will happen
 
 root.geometry("600x450")  # This sets the size of the window to be 600 pixels wide and 450 pixels tall
 root.resizable(False, False)  # This stops people from resizing the window (it stays the same size)
-#root.config(bg=background)  # This makes the background color of the window pink
+#root.config(bg=background)  # This makes the background color of the window 
 root.title("Message Encoder")  # This gives the window a title, which shows at the top of the window
 
 # This keeps the window open and ready to use
