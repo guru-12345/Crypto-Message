@@ -1,10 +1,7 @@
 #Run the code and observe the output.
-#Line 19 To add an image as a label, first load the image using PIL's Image.open() method.
-#Line 19 create a CTkImage object with the image, specifying its size.
-#Line 22,23 create a CTkLabel widget with the image, and set the position.
 #Task 1: Increase the size of the logo to (100,100).
-#Task 2: Check line 26 to find out why the message label isn't showing on the window 
-#and place it at (100,20).
+#Task 2: Find out why the message label isn't showing on the window and place it at (100,20).
+
 import customtkinter as ctk   
 from PIL import Image, ImageTk    # A library to work with pictures
 
