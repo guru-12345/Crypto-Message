@@ -15,7 +15,7 @@ label1.place(x=0, y=0)
 label2 = ctk.CTkLabel(root, text="Center of the Window")
 label2.place(x=300, y=225)
 
-
+#Add a lable at the bottom right corner.
 
 
 
