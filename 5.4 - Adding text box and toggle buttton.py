@@ -7,11 +7,6 @@
 import customtkinter as ctk   
 from PIL import Image, ImageTk    
 
-
-#Set appearance mode and color theme
-ctk.set_appearance_mode("dark")  # Modes: "System" (default), "Dark", "Light"
-ctk.set_default_color_theme("blue")  # Themes: "blue" (default), "green", "dark-blue"
-
 background = "#2E2E2E"
 root = ctk.CTk()  
 
