@@ -1,14 +1,14 @@
 #Run the code and observe the output.
-#Task 1:Link the open_button with command=open_image.
-#Task 2:Add the missing code to:Open the image, Resize it, Convert and display it
-#Task 3:Uncomment line 44 and observe the output
+#Task 1:Link the open_button with command=open_image in line 64 .
+#Task 2:Remove the word global in line 38 and Observe the error.
+#Task 3:Add global back and observe what it fixes in the VSCode Terminal.
 
 import customtkinter as ctk   
 from PIL import Image, ImageTk   
-from tkinter import filedialog, messagebox # Import tools to open files and show pop-up messages
+from tkinter import filedialog # Import tools to open files
 
-ctk.set_appearance_mode("dark")
-ctk.set_default_color_theme("blue")
+ctk.set_appearance_mode("Dark")
+
 background = "#2E2E2E"
 file_types = [("PNG files", "*.png")]   # Set allowed file type to only PNG images
 file_path = ""   # Create an empty variable to store the selected file path
@@ -36,19 +36,8 @@ def toggle():
 
 def open_image():
     global file_path
-    file_path = filedialog.askopenfilename(title="Select an image file", filetypes=file_types)
-
-    if file_path:
-        # Open the selected image
-        # Resize it to max (240, 240)
-        # image.thumbnail(max_size, Image.Resampling.LANCZOS)
-        # Convert it using ImageTk.PhotoImage
-        # Configure PhotoLabel to show the image
-        pass  # 👈 Replace this with your code
-
-
-
-
+    file_path = filedialog.askopenfilename(title="Pick a file")
+    print("Selected file is:", file_path)
 
 root = ctk.CTk()  
 root.geometry("600x450")  
