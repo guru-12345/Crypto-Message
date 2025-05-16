@@ -1,8 +1,8 @@
 #Run the code and observe the output.
 #Task 1:Create a textbox named "Data_entry" with size width=250,height=200,border_width=5 and place it at (270, 100).
 #Task 2: Load two images (dark_mode.png and white_mode.png) with size (70, 45)
-#Task 3: Create a button using dark_image,Set the fg_color and hover_color to the background color
-#Task 4: Place the button at (480, 20)
+#Task 3: Create a toggle button using dark_image,Set the fg_color and hover_color to the background color
+#Task 4: Place the toggle button at (480, 20)
 
 import customtkinter as ctk   
 from PIL import Image, ImageTk    
