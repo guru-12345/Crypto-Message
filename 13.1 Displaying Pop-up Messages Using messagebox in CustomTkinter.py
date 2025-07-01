@@ -1,6 +1,7 @@
-#Run the code and observe the output.
-#Task 1:Link the encrypt_button with command=encrypt in line 107.
-#Task 2:Uncomment line 57 & write the code to hide the message in the image using:lsb.hide(file_path,data)
+# On line 54 get the message from the text box (starting from line 1, char 0 to the end)
+# On line 63 show a warning if no image is selected or message is missing
+
+#Task 1: Uncomment line 58 & write the code to hide the message in the image using:lsb.hide(file_path,data)
 
 
 import customtkinter as ctk   
