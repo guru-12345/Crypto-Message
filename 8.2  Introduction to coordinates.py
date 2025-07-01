@@ -1,5 +1,7 @@
-#In this code, labels are used to display text at specific (x, y) coordinates on the window using the place() method.
-#For example, (0, 0) places the label at the top-left corner, and (300, 225) places it near the center of a 600×450 window.
+#In this code, labels are used to display text at specific (x, y) coordinates on the window 
+#using the place() method.
+#For example, (0, 0) places the label at the top-left corner, and (300, 225) 
+#places it near the center of a 600×450 window.
 
 #Run the code and observe the x and y coordinates of label1 and label2.
 #Task-1: Create and place new label at coordinates (430, 430) in the bottom-right corner.
