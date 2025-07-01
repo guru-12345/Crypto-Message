@@ -9,9 +9,13 @@
 import customtkinter as ctk
 
 # Create the main window
-root = ctk.CTk()
-root.geometry("600x450")  # Window size 600x450
-root.bgcolor("#2E2E2E")
+background = "#2E2E2E"
+root = ctk.CTk()  
+
+root.geometry("600x450")  
+root.resizable(False, False)  
+root.config(bg=background) 
+root.title("Crypto Message")
 # Add a label at the top-left corner (0, 0)
 label1 = ctk.CTkLabel(root, text="Top-left Corner")
 label1.place(x=0, y=0)
