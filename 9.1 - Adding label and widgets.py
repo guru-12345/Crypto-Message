@@ -1,4 +1,6 @@
-#Run the code and observe the output.
+#This line opens a picture named logo.png and resizes it to 50 by 50 pixels so it can be shown in the app.
+#It helps us use pictures like icons or logos in our project.
+
 #Task 1: Increase the size of the logo to (100,100).
 #Task 2: Find out why the message label isn't showing on the window and place it at (100,20).
 
