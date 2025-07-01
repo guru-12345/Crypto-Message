@@ -1,8 +1,21 @@
-#Run the code and observe the output.
-#Task 1:Link the toggle button with command=toggle.
-#Task 2:Complete the toggle function — write the missing part to switch back to "Dark" mode.
-#Task 3:Update background color for all widgets — add .configure() for root,
-#message_label, logo_image, PhotoLabel, Data_entry, open_button, encrypt_button, and decrypt_button.
+#The toggle() function helps the app switch between Light Mode and Dark Mode.
+#    It first checks the current mode (is it dark or light?).
+#    If it's Dark Mode, it switches to Light Mode by:
+#    Changing the background color to white.
+#    Updating the button image to show the dark mode icon.
+#    If it's Light Mode, it switches back to Dark Mode by:
+#    Changing the background color to dark gray.
+#    Updating the button image to show the light mode icon.
+
+
+#Task 1:Set the background color of all the widgets to match the main background.
+#       Example:
+#       root.configure(fg_color=background)
+
+# ------Now apply the same to these widgets:-----
+#  1. message_label, 2. logo_image,3. PhotoLabel
+#  4. Data_entry, 5. open_button, 6. encrypt_button, 7. decrypt_button
+
 
 import customtkinter as ctk   
 from PIL import Image, ImageTk    
@@ -18,12 +31,17 @@ def toggle():
         background = "#FFFFFF"
         toggle_button.configure(fg_color=background, hover_color=background, image=white_image)
     else:
-        # Complete this part to set Dark mode back
-        ...
+        ctk.set_appearance_mode("Dark")
+        background = "#2E2E2E"
+        toggle_button.configure(fg_color=background, hover = background, image=dark_image)
     
     # Now update background of all widgets
     root.configure(fg_color=background)
+   
     # Add more widgets here like message_label, logo_image etc.
+
+
+
 
 
 
@@ -68,7 +86,7 @@ Data_entry.place(x=270, y=100)
 
 white_image = ctk.CTkImage(Image.open('dark_mode.png'), size=(70, 45))
 dark_image = ctk.CTkImage(Image.open('white_mode.png'), size=(70, 45))
-toggle_button = ctk.CTkButton(root, image=dark_image, text="", fg_color=background, hover_color=background)
+toggle_button = ctk.CTkButton(root, image=dark_image, text="", fg_color=background, hover_color=background,command=toggle)
 toggle_button.place(x=480, y=20)
 
 root.mainloop()
