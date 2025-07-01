@@ -1,15 +1,16 @@
-#Run the code and observe the output.
-# Task 1: Add an open image button
-# Hint:-
-#Step 1: Load the button's image, Use ctk.CTkImage(), Open 'open_file.png', Set size (70, 70).
+# Task 1: Create the "Encrypt" button
+#         Use an image called encryption.png
+#         Set the size to (60, 70)
+#         Add the button with no text (text="")
+#         Set the button color to the background
+#         Place it at (270, 365) on the window
 
-#Step 2: Create the button, Use ctk.CTkButton(), Set the image you loaded, Set text to empty ""
-#Set the fg_color and hover_color to the background color
-
-#Step 3: Place the button, Use .place(x=100, y=355).
-
-# Task 2: Add two more buttons — Encrypt and Decrypt. 
-# Load their images and place them at (270, 365) and (430, 365).
+#Task 2: Create the "Decrypt" button:
+#        Use an image called decrypt.png
+#        Set the size to (60, 70)
+#        Add the button with no text (text="")
+#        Set the button color to the background
+#        Place it at (430, 365) on the window
 
 import customtkinter as ctk   
 from PIL import Image, ImageTk    
@@ -40,10 +41,10 @@ label_image = ImageTk.PhotoImage(sender) # Convert the resized image into a form
 PhotoLabel = ctk.CTkLabel(root, image=label_image, text="", width=247, height=247, fg_color="white")
 PhotoLabel.place(x=10, y=100) # Place the label at position (10, 100) in the window
 
-#Write a code to create open_button here
-
-
-
+#open_button 
+open_file = ctk.CTkImage(Image.open('open_file.png'), size=(70, 70))
+open_button = ctk.CTkButton(root, image=open_file, text="", fg_color=background, hover_color=background)
+open_button.place(x=100, y=365)
 
 #Write a code to create encrypt_button here
 
