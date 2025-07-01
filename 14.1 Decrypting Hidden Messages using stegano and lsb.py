@@ -1,10 +1,8 @@
-#Run the code and observe the output.
-#Task 1:Link the decrypt_button with command=decrypt in line 118.
-#Task 2:Uncomment line 73, Use lsb.reveal() to extract the hidden message from the image
-#Task 3:Uncomment line 74 & Clear any previous text in the message entry box
-#Task 4:Uncomment line 75-77 & If a message was found, insert it in the text box and show success message
-#Task 5:Uncomment line 80 & If something goes wrong, show an error message saying no message was found
-#Task 6:Uncomment line 83, Show a warning message if no image file is selected
+#Task 1:Uncomment line 71, Use lsb.reveal() to extract the hidden message from the image
+#Task 2:Uncomment line 72 & Clear any previous text in the message entry box
+#Task 3:Uncomment line 74-76 & If a message was found, insert it in the text box and show success message
+#Task 4:Uncomment line 78 & If something goes wrong, show an error message saying no message was found
+#Task 5:Uncomment line 81, Show a warning message if no image file is selected
 
 import customtkinter as ctk   
 from PIL import Image, ImageTk   
@@ -115,7 +113,7 @@ encrypt_button = ctk.CTkButton(root, image=encrypt_image, text="", fg_color=back
 encrypt_button.place(x=270, y=365)
 
 decrypt_image = ctk.CTkImage(Image.open('decrypt.png'), size=(60, 70))
-decrypt_button = ctk.CTkButton(root, image=decrypt_image, text="", fg_color=background, hover_color=background)
+decrypt_button = ctk.CTkButton(root, image=decrypt_image, text="", fg_color=background, hover_color=background,command=decrypt)
 decrypt_button.place(x=430, y=365)
 
 Data_entry = ctk.CTkTextbox(root, width=250, height=200, border_width=5)
