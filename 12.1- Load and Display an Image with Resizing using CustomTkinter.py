@@ -1,13 +1,9 @@
-#Run the code and observe the output.
-#Task 1:Select an Image File using filedialog.askopenfilename & use the 'file_types' variable defined earlier
+#On line no 44 it opens an image file that the user selects from their computer.
+#The image is resized to fit within 240×240 pixels without losing quality.
+#The resized image is shown on the screen using PhotoLabel.
 
-#Task 2:Open and Resize the Image
-#Hint: Use Image.open() to open the file, and image.thumbnail() to resize it.
-#Resize image properly without distortion using Image.Resampling.LANCZOS.
-
-#Task 3:Display the Image on the Label
-#Hint: Use ImageTk.PhotoImage() to convert the image and update PhotoLabel.
-
+#Task 1:Change the max size of the image on line 46 to 240 as height and width. 
+ 
 import customtkinter as ctk   
 from PIL import Image, ImageTk   
 from tkinter import filedialog # Import tools to open files
@@ -41,12 +37,20 @@ def toggle():
 
 def open_image():
     global file_path
-    #Write the code here
+    #Open image file
+    file_path = filedialog.askopenfilename(title="Select an image file", filetypes=file_types)
+
+    if file_path:
+        # Open and resize the image
+        image = Image.open(file_path)
+        max_size = (20, 25)
+        image.thumbnail(max_size, Image.Resampling.LANCZOS)
+
+        # Convert to Tkinter-compatible image and update PhotoLabel
+        label_image = ImageTk.PhotoImage(image)
+        PhotoLabel.configure(image=label_image)
+        PhotoLabel.image = label_image  # Keep reference to avoid garbage collection
     
-
-    
-
-
 root = ctk.CTk()  
 root.geometry("600x450")  
 root.resizable(False, False)  
