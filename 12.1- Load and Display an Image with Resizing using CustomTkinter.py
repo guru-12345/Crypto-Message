@@ -1,5 +1,4 @@
-#On line no 44 it opens an image file that the user selects from their computer.
-#The image is resized to fit within 240×240 pixels without losing quality.
+#On line no 45 it opens an image file that the user selects from their computer.
 #The resized image is shown on the screen using PhotoLabel.
 
 #Task 1:Change the max size of the image on line 46 to 240 as height and width. 
