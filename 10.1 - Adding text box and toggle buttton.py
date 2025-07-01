@@ -1,8 +1,16 @@
-#Run the code and observe the output.
-#Task 1:Create a textbox named "Data_entry" with size width=250,height=200,border_width=5 and place it at (270, 100).
-#Task 2: Load two images (dark_mode.png and white_mode.png) with size (70, 45)
-#Task 3: Create a toggle button using dark_image,Set the fg_color and hover_color to the background color
-#Task 4: Place the toggle button at (480, 20)
+#We load two pictures named dark_mode.png and white_mode.png and set their size to 70×45 pixels. 
+#These images will be used for the toggle (theme change) button.
+
+#We create a button using one of the images and make sure it matches the background color, 
+#so it looks good and works like a theme switch.
+
+#Task 1: Add a Textbox to Type Your Message
+#       You need to create a box where you can type a secret message.
+#       🔹 Name it: Data_entry
+#       🔹 Size: width = 250, height = 200
+#       🔹 Border width: 5 (so the box has a visible border)
+#       🔹 Place it at: x = 270, y = 100 (on the right side of the app)
+
 
 import customtkinter as ctk   
 from PIL import Image, ImageTk    
@@ -47,10 +55,13 @@ decrypt_button.place(x=430, y=365)
 
 
 
+#Load the image for Dark and Light mode
+dark_image = ctk.CTkImage(Image.open('white_mode.png'), size=(70, 45))
+white_image = ctk.CTkImage(Image.open('dark_mode.png'), size=(70, 45))
+
 #Create a toggle button here
-
-
-
+toggle_button = ctk.CTkButton(root, image=dark_image, text="", fg_color=background, hover_color=background)
+toggle_button.place(x=480, y=20)  
 
 
 root.mainloop()
