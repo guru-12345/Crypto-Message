@@ -1,15 +1,5 @@
-#Run the code and observe the output.
-#Task 1: Use filedialog.asksaveasfilename() to open a save dialog in encrypt function.
-#Hint: Use .png as the default file type.
-#Task 2:Check if the user selected a path
-#Hint: Use an if condition to verify if a save path was chosen before saving
-#Task 3:Save the image if path is valid
-#Hint: Use .save(save_path) to store the image with the hidden message.
-#Task 4:Give feedback using messagebox
-#Hint: Show success if saved, show warning if canceled.
-#Task 5:Clear the input box
-#Hint: After successful encryption, delete the text in the message box using:Data_entry.delete(1.0, "end")
-
+#This code hides a secret message inside an image and lets you save the new image. 
+#It shows a success message if done correctly, or a warning if something is missing.
 
 import customtkinter as ctk   
 from PIL import Image, ImageTk   
@@ -57,14 +47,34 @@ def open_image():
         PhotoLabel.image = label_image
 
 
+# This function hides a secret message inside an image
 def encrypt():
+    # Get the message typed in the text box
     data = Data_entry.get(1.0, "end").strip()
+
+    # Check if the user has selected an image file
     if file_path:
-        encrypted_image = lsb.hide(file_path,data)
-        # Ask the user where to save the new image
-        messagebox.showinfo("Success", "Message encrypted in image successfully!")
+        # Hide the message inside the selected image
+        encrypted_image = lsb.hide(file_path, data)
+
+        # Ask the user where to save the new image with the hidden message
+        save_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png")])
+
+        # If the user selected a place to save the file
+        if save_path:
+            # Save the new image
+            encrypted_image.save(save_path)
+
+            # Show a message that it was successful
+            messagebox.showinfo("Success", "Message encrypted in image successfully!")
+
+            # Clear the text box after saving
+            Data_entry.delete(1.0, "end")
+        else:
+            # If the user canceled the save, show a warning
+            messagebox.showwarning("Save Cancelled", "Save operation was cancelled.")
     else:
-        #Show a warning if no image was selected
+        # If no image was selected, show a warning
         messagebox.showwarning("Error", "Please select an image and enter a message to encrypt.")
 
 
