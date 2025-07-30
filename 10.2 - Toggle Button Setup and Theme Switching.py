@@ -8,13 +8,8 @@
 #    Updating the button image to show the light mode icon.
 
 
-#Task 1:Set the background color of all the widgets to match the main background.
-#       Example:
-#       root.configure(fg_color=background)
-
-# ------Now apply the same to these widgets:-----
-#  1. message_label, 2. logo_image,3. PhotoLabel
-#  4. Data_entry, 5. open_button, 6. encrypt_button, 7. decrypt_button
+#Task 1:Set the background color of all the widgets to match the main background, same as done for root on line 34.
+#  1. message_label, 2. logo_image,3. PhotoLabel, 4. Data_entry, 5. open_button, 6. encrypt_button, 7. decrypt_button
 
 
 import customtkinter as ctk   
@@ -35,12 +30,9 @@ def toggle():
         background = "#2E2E2E"
         toggle_button.configure(fg_color=background, hover = background, image=dark_image)
     
-    # Now update background of all widgets
+    # Now update the background of all widgets
     root.configure(fg_color=background)
    
-    # Add more widgets here like message_label, logo_image etc.
-
-
 
 
 
