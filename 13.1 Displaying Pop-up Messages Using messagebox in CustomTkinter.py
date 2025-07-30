@@ -52,10 +52,10 @@ def open_image():
 
 def encrypt():
     data = Data_entry.get(1.0, "end").strip() #Get the message from the text box
-    #Check if an image is selected
+    # Check if an image is selected
     if file_path:
-        # ✅ TASK: Use lsb.hide() to hide the message in the image
-        #encrypted_image = ...
+        # TASK: Use lsb.hide() to hide the message in the image
+        # encrypted_image = ...
         # Ask the user where to save the new image
         messagebox.showinfo("Success", "Message encrypted in image successfully!")
     else:
