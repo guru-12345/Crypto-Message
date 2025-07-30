@@ -4,12 +4,9 @@
 #We create a button using one of the images and make sure it matches the background color, 
 #so it looks good and works like a theme switch.
 
-#Task 1: Add a Textbox to Type Your Message
-#       You need to create a box where you can type a secret message.
-#       🔹 Name it: Data_entry
-#       🔹 Size: width = 250, height = 200
-#       🔹 Border width: 5 (so the box has a visible border)
-#       🔹 Place it at: x = 270, y = 100 (on the right side of the app)
+# Task 1: Add a Textbox attribute to Type Your Message - width=250,height=200,border_width=5 on line 51.
+# Task 2: Use the .place() method to position the Data_entry textbox on the app window.
+#          Set the following coordinates: x = 270, y = 100 on line 52
 
 
 import customtkinter as ctk   
@@ -51,8 +48,7 @@ decrypt_button = ctk.CTkButton(root, image=decrypt_image, text="", fg_color=back
 decrypt_button.place(x=430, y=365)
 
 #Create a textbox here
-
-
+Data_entry = ctk.CTkTextbox(root,)
 
 
 #Load the image for Dark and Light mode
