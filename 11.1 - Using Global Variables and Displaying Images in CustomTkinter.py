@@ -1,6 +1,6 @@
 #Run the code and observe the output.
-#Task 1:Link the open_button with command=open_image in line 64 .
-#Task 2:Remove the word global in line 38 and Observe the error.
+#Task 1:Link the open_button with the open_image function using the command attribute on line 64.
+#Task 2:Remove the word global in line 38 and observe the error.
 #Task 3:Add global back and observe what it fixes in the VSCode Terminal.
 
 import customtkinter as ctk   
