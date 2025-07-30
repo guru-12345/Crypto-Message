@@ -1,7 +1,7 @@
-#On line no 45 it opens an image file that the user selects from their computer.
+#On line 44, it opens an image file that the user selects from their computer.
 #The resized image is shown on the screen using PhotoLabel.
 
-#Task 1:Change the max size of the image on line 46 to 240 as height and width. 
+#Task 1:Change the max size of the image height and width to 240 on line no 45. 
  
 import customtkinter as ctk   
 from PIL import Image, ImageTk   
