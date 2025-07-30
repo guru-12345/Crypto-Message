@@ -1,9 +1,3 @@
-#Task 1:Uncomment line 71, Use lsb.reveal() to extract the hidden message from the image
-#Task 2:Uncomment line 72 & Clear any previous text in the message entry box
-#Task 3:Uncomment line 74-76 & If a message was found, insert it in the text box and show success message
-#Task 4:Uncomment line 78 & If something goes wrong, show an error message saying no message was found
-#Task 5:Uncomment line 81, Show a warning message if no image file is selected
-
 import customtkinter as ctk   
 from PIL import Image, ImageTk   
 from tkinter import filedialog, messagebox 
@@ -68,19 +62,17 @@ def decrypt():
     global file_path  # Use the selected image file path
     if file_path:
         try:
-            # message = ...
-            # Data_entry.delete(...)
-            # if message:
-            #     Data_entry.insert(...)
-            #     messagebox.showinfo(...)
-
+            message = lsb.reveal(file_path)
+            Data_entry.delete(1.0, "end")
+            if message:
+                Data_entry.insert(1.0, message)
+                messagebox.showinfo("Success", "Message decrypted successfully!")
+            else:
+                messagebox.showwarning("No Message", "No hidden message found in the image.")
         except Exception as e:
-            # messagebox.showerror(...)
-
+            messagebox.showerror("Error", f"Something went wrong:\n{e}")
     else:
-        # messagebox.showwarning(...)
-
-
+        messagebox.showwarning("Error", "Please select an image to decrypt a message from.")
 
 
 root = ctk.CTk()  
